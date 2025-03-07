@@ -1,0 +1,63 @@
+---
+id: get-all-collections
+title: "Get list of all Bohr OGC API feature collections"
+description: "Get a list of all the available Bohr OGC API feature collections"
+sidebar_label: "Get list of all Bohr OGC API feature collections"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVt9v2zgM/lcEPvtH0mS7NG9ZblcUd8CGtQMOKPIgy3SsRZY0SU7bC/y/D7Sd1GnTazdsB9xLLIkM+VH8SHEHHkXtZLiH+c0OuJXxBmm9isDwOpRntG5WEQS+9jC/gaVRCkWQRntYRZCjF05a2sMcLjAwzpT0gZmCcaVYKJHxLZeKZwrZO1M69uFiyRYfL1mBPNQOmRhYjMBYdJw2lznMYY1hodTySMOht0Z79DDfwdloRJ9jGAulXnSVQATC6IA6kAFurZKidZx+8WRlB16UWHFahXuLMAeTfUERIALrCGaQHQYl9cYP1Lhz/B4ikAEr//LfS4fFQMsHJ/UaIiiMq3iAOdROQUNxq6dqTdQfnBLIoE5JHkTwl9Sb9kC410RwwIa6rogNZQh2nqa3t7eJsajX0icaQ5pjkQrn0w8Xy3ScTNLlp6vZFFato0Euf/jKZP5dAT+i6Qn5fxY+mbx+LmF4t6fjv4fvLQ+Sq5cVs8zcvSKu5851XWXohlTMTZ0phOYpZU6Q66qD+b6LigRYWeNeA1zqgG57pPm94A+AyPFLUK97ZHusA9ED/P9/nQ9OHnrqp76fPif3Q4UmgumplntdIvPotuiY4FqbwIxjt1IpRmvrjEDv29fA4dcafWB5jSwYxjXj1nKHOjChJH3QOeMSdoXYLdm+47PCOJZj4FL9zP59qps8ftkWLDgupF4zmaMOspDoWjgUUgcYIqiklhW1hlkEFb87rPGOV7a91sW75e/js8mU8lb59WscD/b0qh4cslDywIwQtXOYJ8ekJYWjvJE/DKXpX1W6BB5KmEO6HafHT3CXR99OBMTJedvn/DxNuZVJZkqX1BugoWA/PFzRTXeXeRghHsrEyj+R6kTzivZ/x4uPl3F3JCnEEnmOjm5kP3I8ZKw7iKBQ5razX4fSOPlPm+qlyfHJ4ecjyARX10Jh7RMheaXMWupEmCrNx5N8PMVpfD7JJvF0hOOYjyaTOONnv72ZzUZ5ztPO//6zPUtG6d4XQgTBbPBX+GsdtcYpHcLYvp2fZ2+LIs9jPnlbxNPRbBZzPs7i83E+nU5wlL2ZzdIkx4LXqu3W/arPv9SFae+2J8nRiBSzP7ohiRhA6e/otx0nI8qMNT5UvC2rPo006w0nvVfMdo9e4UP5/oy5sSdMwLuQWsWlJtQte3c9029gO4bjAWQVQWl8INlul3GPn51qGjr+WqPr5+Atd5JQtJNwtGcrFUfLc1gIgZYKastV3RH+US+iUjkU38X7a4haxh7XyKYtiH5B1vcifT+wPSyezj39NtEz6rtdV31Nc9DvRM/+ow9vr033uGqa5hsneRzS
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get list of all Bohr OGC API feature collections"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/collections"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of all the available Bohr OGC API feature collections
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"All Bohr OGC API feature collections.","content":{"application/json":{"schema":{"type":"object","properties":{"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string","format":"url"},"rel":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"}},"title":"Link"}},"crs":{"type":"array","items":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84"]}},"collections":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"crs":{"type":"array","items":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84"]}},"itemType":{"type":"string"},"extent":{"type":"object","properties":{"spatial":{"type":"object","properties":{"bbox":{"type":"array","items":{"type":"array","items":{"type":"number","format":"double"}}},"crs":{"type":"string"}},"title":"SpatialExtent"},"temporal":{"type":"object","properties":{"interval":{"type":"array","items":{"type":"array","items":{"type":"string"}}},"trs":{"type":"string"}},"title":"TemporalExtent"}},"title":"Extent"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string","format":"url"},"rel":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"}},"title":"Link"}}},"title":"CollectionResponse"}}},"title":"CollectionsResponse"}}}},"400":{"description":"The server cannot or will not process the request due to an apparent client error. See error response for details.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

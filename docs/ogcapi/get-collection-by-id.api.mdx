@@ -1,0 +1,71 @@
+---
+id: get-collection-by-id
+title: "Get a single Bohr OGC API feature collection"
+description: "Get information about an Bohr OGC API feature collection"
+sidebar_label: "Get a single Bohr OGC API feature collection"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktv2zgQ/ivEXLoL6GHHbtfVLXG7QbALNGhSYIHCB0ocWawlkiUpJ6mh/74YSbbs2m5SLHrbi0SRo5lvnvw24DCrrfRPkHzeADcyXCGtFwFoXvvigtbNIgDPlw6SzzDXZYmZl1o5WAQg0GVWGvqGBK7RM6lybStOO4ynuvaMK3alC8s+XM/Z5e0Ny5H72iLLdqogAG3Qtj/dCEhgiX4wdPV0IyAAwy2v0KN1LVbFK4QEBiWtkCQYhvsCvsd2yVZKP6g9q+zmXQQBWPxaS4sCEm9rDMBlBVYckg34J0MmnLdSLaEJAB95ZUraq57CPfgUIIvOaOXQ0Z8XoxG9vkfgpFqW+Fw0CFSmlUflSQk3ppRZG5v4iyNNm2OMOv2CmacoWYqklx0OKU764aUnL06cHCA+cZ5Zt7fPreVPFHWPlTuWDwBVXVHVFN6bJI4fHh4ibVAtpYsU+lhgHmfWxR+u5/E4msTzj3ezKSyaplN532o7mYdtcH7svjPcS14+L5im+vEFfp3bV3WVooUAutKHBISu0xKhaY5itvViSAPcdTDfd17RAVZG25cAl8qjXR9I/iz4HSAy/BzU+x7ZFuve0QC/lGr1EstnfCos5qeKaRfc2pZkxmJ5urrPlc25st9z4m+pVn0o+p1hDn3sO5zOmwCmp3r8vkDm0K7RsowrpT3Tlj3IsmS0NlZn6BzzBTIaO+g8EzUyr2lIcmO4ReVZVkp6obXaRuwOsVuy7YhhubZMoOeydL94WBxPUW95JtWSSYHKy1yibeGQSx1gCKCSSlbU+bMAKv64Ww/z8/Jq/m58MZlSWiq3fInhvW+m88Eg8wX3TGdZbS2K6LAmSeAob9PjvA1ZZq82+3dK84pJ1yaPM1cbo61HwQbxiN2WyB3lM0dLmSRgQmd1hcp31yDFh7NSOk/AT2n5P40/mUayh77QPVlo6YEvIIF4PY6H/Ln4MJkQQNedHYegQZK0l5NL4pgbGaW6sFG9am/0LTW6o8B3sd0RpGG2GfkX0nDr+cg/4eXtTdhttWSkQC7QUoC2hGpIYLcRQF7qh05/7Qtt5bc283Mt8Gjz0wFkgqvqrMTaRZnkVamXUkWZrmIxnojxFKfh20k6CacjHId8NJmEKb/44/VsNhKCx5397Wt9EY3irS2EALxe4a+w1xpqlVM6Mm36O/ht+ibPhQj55E0eTkezWcj5OA3fjsV0OsFR+no2iyOBOa/L9ortV305EO9sY9vXzAHJCtmfHc1yEAClv6vG9TgaUWaMdr7ibZf1aSQmy1/I174v8s3Qyf+FEfdF4vHRx6bkUhHStmI3fbF/hvW4nRsDJQ8gOWDEiwAK7TzJbjYpd/jJlk1D219rtD3TX3MrOdEV6gkhHa0FJDkvHf7At98+9sz5d3aWXJ90Yts6ippkzcuaviCAtrMOGX2zaIJtCxG6TuQyy9D4vZ+P5iX1725AXL+/h6Bto8PGXbVd2i9I+0lg+x3dmadnE5wR32y6kdA0O/nu6OwfvXtbaYrRommafwGrF6F0
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a single Bohr OGC API feature collection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/collections/{collectionId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get information about an Bohr OGC API feature collection
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"collectionId","in":"path","description":"A known collection ID.","required":true,"schema":{"type":"string"},"example":"my-collection"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"A single Bohr OGC API feature collection.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"crs":{"type":"array","items":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84"]}},"itemType":{"type":"string"},"extent":{"type":"object","properties":{"spatial":{"type":"object","properties":{"bbox":{"type":"array","items":{"type":"array","items":{"type":"number","format":"double"}}},"crs":{"type":"string"}},"title":"SpatialExtent"},"temporal":{"type":"object","properties":{"interval":{"type":"array","items":{"type":"array","items":{"type":"string"}}},"trs":{"type":"string"}},"title":"TemporalExtent"}},"title":"Extent"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string","format":"url"},"rel":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"}},"title":"Link"}}},"title":"CollectionResponse"}}}},"400":{"description":"The server cannot or will not process the request due to an apparent client error. See error response for details.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}},"404":{"description":"Collection '{collectionId}' is not a supported Collection. Please refer to the documentation for a list of supported Collections.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-collection-queryables
+title: "Get a list of queryable attributes for this feature collection"
+description: "Get a list of queryable attributes for this feature collection"
+sidebar_label: "Get a list of queryable attributes for this feature collection"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVllv20YQ/iuLQYAkAKnDUlJZb46TBkYL1M0BFDD8MNodihuTu8zuULYr8L8XQ+qyRacJ2r71RVrOzO7cM98aIuk6WL6H+dUasLLpDcn5OgGPNecncm6uE2BcRphfwbkvCtJsvYsgQhUFlK8LA3NYEu/5v9cU7nFRUIQEKgxYElOIrSKHJcEc9E74wkAC1sEcKuQcEjAUdbCV8GAOZ+rG+Vun9hfUxdsBJBDoa20DGZhzqCmBqHMqEeZr4PtKVEQO1i2hSYDusKwKoZX36f4hEO8Cxcq7SFFunoxG8vfYgsJGVj5TX7d+KWQOdlEzRYXOKM7JBiV6o8p8UJzbqDJCrgMdWC5ma++YHIsarKrC6jaGwy9RdK2PvfCLL6RZ4hgk4mw7S599w91n1vTSO0Ifw3LRz3kQiR7+Q6Mem4zGWLmKxeU35R698qQ1TzqQ+VAi97JKvPuV3JLzA651TEsKsL8opMlJ6xEyU+j39u+ikVsKGHR+3x8rDJvEH7F0bov+nJXWXTCV8TutL/HuR8RtJwvaBl0XGF7sOvclJECuLg8ewhDwHnaXjoxt9pUEu3eeIMcPm7YTfpPAtK/xPuWkIoUVBaXROc/KB3Vri0LJuQpeU4zSe0pmAUVWpibFXqFTWHXhVrqw8kch+DBQH4m6o9r2fduvhhhtEf/F/uxrwePRxgG1dUtlDTm2maWwGR8bK8Wg0jpbSiJmbXp35/1QO3tz/nZ8Mpm2BRCX36P44FsG206h4hxZea3rEMgM4DB570TgKG/T47ztF4F6vj4c9M1zZWObPFSxriofmIzaiw/UZUEYJZ8ZBcmkGGa8rkty3CaijQ/uJnLfK/+n8QfT+HiywXvigxj3br1vbDlxljj3G1jQQgAZvzBcjYd7sTh8WBvDr4eooev7DjLUoYA55MxVnA+HWNnBwudhUN+0C3wLYz5KSrus7cDMfnZV9heS4bWBH3+kZ5cXaUdqsUdOaChI6LfgZ18aHSGBrPC33fs15z7YP9uaOveGjoifH5gs5rpaF1THgbZYFn5p3UD7cmjGEzOe0jQ9nSwm6XRE4xRHk0m6wJOfXs1mI2Nw2Onf/q1OBqPhVhdBAuxv6L/Q1ypqH5d0aF91sV2cLl5nmTEpTl5n6XQ0m6WI40V6OjbT6YRGi1ez2XBgKMO6kF2zPW0KzbrMHyx5eOPzoH57f67OLi9Uqn7uqkkqQNLfleNqPBi1C9RHLrHt300a/3Gh9m90pjseVgVaJ2rb8ltvivgKVuN2vOyxcALzR2j2oJKvE8h9ZLm4Xi8w0udQNI2QW6EOb68w2HZZSrUbG+VsYJ5hEenIxt1kgxcfNhD4pXoSJfd6tG0KJ+W/wqKWL0ig7ZmH0Ly5FlzTNYdY14mcaU0VH1w+mrHSmbsp8P7dJ0GD9QMQhpW9aftvc5DXew077NVOvfw2yRPi63XX7E2zk+9YT97YuLeVlhhdN03zF9MkgE0=
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a list of queryable attributes for this feature collection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/collections/{collectionId}/queryables"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of queryable attributes for this feature collection
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"collectionId","in":"path","description":"A known collection ID.","required":true,"schema":{"type":"string"},"example":"my-collection"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"A list of queryable attributes and their types for this feature collection.","content":{"application/json":{"schema":{"type":"object","properties":{"$schema":{"type":"string"},"$id":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"properties":{"type":"object","additionalProperties":{"type":"object","properties":{"title":{"type":"string"},"type":{"type":"string"},"format":{"type":"string"},"maxLength":{"type":"integer","format":"int32"},"pattern":{"type":"string"},"description":{"type":"string"},"hierarchy":{"type":"string"},"parent":{"type":"string"},"child":{"type":"string"},"minItems":{"type":"integer","format":"int32"},"maxItems":{"type":"integer","format":"int32"},"items":"circular(Queryable)","enum":{"type":"array","items":{"type":"string"}}},"title":"Queryable"}}},"title":"QueryablesResponse"}}}},"400":{"description":"The server cannot or will not process the request due to an apparent client error. See error response for details.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}},"404":{"description":"Collection '{collectionId}' is not a supported Collection. Please refer to the documentation for a list of supported Collections.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

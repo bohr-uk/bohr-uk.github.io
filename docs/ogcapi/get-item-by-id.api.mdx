@@ -1,0 +1,71 @@
+---
+id: get-item-by-id
+title: "Retrieve a feature from the feature collection"
+description: "Retrieve a feature from the feature collection"
+sidebar_label: "Retrieve a feature from the feature collection"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv2zgQ/ivEXJJi9bBjt+volibdwNhDg6TFLlDkQIkji41EqiRlx2vovy9GLyuNkzbB7mWxPtg0NZznNx9HO7CYVEa6LURfdsBL6d8hrW890Lxy2Qmt61sPHF9ZiL7Ab8hdZdACSZRouJNaLQVEsEK3dFi83y4FeFBywwt0aGyjWfECIYJE5zkm3REPpIIISu4y8ECgTYws6RlEcMbulN4otj/AlhcBeGDwWyUNCoicqdADm2RYcIh24LYlmbDOSLWC2gO850WZ016x9feKoPYGf6TD4oeepG3IbHnBNplMMiYtcxkyKVA5mUo0x1K8Yak2zXYn/mpnJ93HP/DVf8YxJMb2AXyr0GwfRfApQ5ZobYRU3CEzmKJBlSCzW+uwYDpt/DZoS60sshXqAp2RaAO2dKyorGMxMv6sEluVpTYOBYu3jbp9wgN2gSmvckeJ++PyZjFnuVYr6SqBYc5ds2DHmXNlFIabzSbQJaqVtIFCFwpMw8TY8OPleTgNZuH59c1i/oay+1Q2PUBVFQTWl6iE25pw3mfBkt6TyYR+vgeElWqVD4VmUo3rPg4cPEi0cqgcqeFlmcukaZhwhfqXr5b07R7HoeOvmDhqIkMt5mTrjRQHkdNuHHjQ1XH7Y82HVYxBeaWlcqR0j4HRSeDGcAIe9ZP9sb37kYiqihgNeJBqU3AHEQhdxTmSse1PyVEOpGvcPB+8g3q8f9mnoj4c+t5RLoSkCvH86hm5B8o7SqTN2oP5IcxQC1o0azQs4Uppx7RhG5nnjNal0Qla23XhtwqtY6JC5jTjivGy5AaVY0ku6QeN0SZgN4jtct+4xEACHZe5fQZ6/wTsHpOkMzyRajUixYEQW4fBg0IqWVBnLjwo+P2w3sPs7P35xfRkNqc6FXb1M4ZH/3sma9PiMu6YTpLKGBTBA5h8IIHrLm1D3eaH6/a4r9nRbnyR1UdUzV5sI13GpIiOdu3lUh+xRFe5aCodU5EqJQJ2lSO3yJIMkzsmG2rkIxIdGdvr/r+oLytq/b3i6+ZaW9Nd1pcrNbp4gr4pOHSZ7oabZqhxGUQQrqfhXsyGD9EQNiQY9uWni6rp/HYQqkwOUXMx2SgMeSmDWGcmqO6Abp9+GruhMraVGmayPdmW8ncktu0GgD/9s6ul3241Y0CGXKChdPcz3B4O7YYHaa43rf7KZdrIvxocnWuBjzY/P3CZ3FVVkmNlg0TyItcrqYJEF6GYzsR0jnP/dBbP/PkEpz6fzGZ+zE9+fbtYTITgYWu//1mfBJOwt4XggdN3+G/Yaww1ypu5QZdtbuPT+F2aCuHz2bvUn08WC5/zaeyfTsV8PsNJ/HaxCAPRTi9043SrDlxSpbrJbYfA9zoz7OPlOTu7WjKfDaOyB1T+FoLraTBpbiFtXcGbnu3K+GJwPsD2UGGH9y4scy5p0G3htuuA+wXW04ZCBuiCB9H3M3lzhXsQdbPxrQeZto5O73Yxt/jZ5HVN2+20SaAW0vI4pzk35bnFR64NpPWfnUUPJr9p224+X/O8IommzdfcSErYC5N3fN29T7xhT74fHXSkJw61HXsyODgGAL1YvNKj178nvcLpDp31be31fEfJbB+eJQmWbnTs4OhNlRgI/vLDJ5r+KuqTMdPeNbTaLcjCQbfGFNy6QN+Uy4Piu13L4XU9yLePnjzRhThET97Xdf03N6Zb9w==
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieve a feature from the feature collection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/collections/{collectionId}/items/{itemId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve a feature from the feature collection
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"collectionId","in":"path","description":"A known collection ID.","required":true,"schema":{"type":"string"},"example":"my-collection"},{"name":"itemId","in":"path","description":"A feature ID which is the identifier(id) for the feature.","required":true,"schema":{"type":"string"},"example":"00000000-0000-0000-0000-000000000000"},{"name":"crs","in":"query","description":"The coordinate reference system of the response geometries. It must be a coordinate reference system supported by the collection. Default is WGS84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84).","schema":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84"]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"A single feature in the feature collection.","content":{"application/geo+json":{"schema":{"type":"object","properties":{"id":{"type":"string"},"type":{"type":"string"},"geometry":{"type":"object","properties":{"type":{"type":"string","example":"Point"},"coordinates":{"type":"array","items":{"type":"object","properties":{"x":{"type":"number","format":"double"},"y":{"type":"number","format":"double"}},"title":"Coordinate"}}},"title":"Geometry"},"properties":{"type":"object","additionalProperties":{"type":"object"}}},"title":"Feature"}}}},"400":{"description":"The server cannot or will not process the request due to an apparent client error. See error response for details.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}},"404":{"description":"The feature collection '{collectionId}' or feature with id:'{itemId}' could not be found. Please check it is a supported collection or feature.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

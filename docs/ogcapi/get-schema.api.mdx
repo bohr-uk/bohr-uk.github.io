@@ -1,0 +1,71 @@
+---
+id: get-schema
+title: "Get schema for a single Bohr OGC API feature collection"
+description: "Get schema for a single Bohr OGC API feature collection"
+sidebar_label: "Get schema for a single Bohr OGC API feature collection"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVllv2zgQ/ivEvLRb6LBjt+voLU27QbAPG/QAFgj8QIsji41EsuTISdbQf1+MDh9x0j2AfVs/WCNqONf3zZBbCJg3XtMjZLdbkE7Hd8jyMgIrGyrPWG6XEZBcB8hu4dJWFeakrQnASg695LdrBRmskT7nJdYSInDSyxoJfehMG1kjZJDvtl8riEAbyMBJKiEChSH32vE3yOBC3Bl7b8R+g7j+kEAEHr832qOCjHyDEYTeYbYFenTsIpDXZg1tBPgga1fxWv0Y7w0B5+MxOGsCBt55Npnw4ziCPhNRWC+kEe9t6cVvV5fi4uZaFCip8XgQHEeWW0NoiC29Sd/w4yQ2u/qGOUEEUinN+2R147mGpPtIjvVa/kUwfy68LyWKgH6DXuTSGEvCenGvq0qw7LzNMQRBJQquGAYSqkFBlpORzkmPhkReaX6g99Yn4jNiL4qxOl32CknqKjxJUTpX6bzDPv0WOKQf5euOstTqFK9TApCXuTZroRUa0oVG34XDKfUBQwS1NrpuasgWEdTyYSfvob94f/lhejabMyHqsP47jg/ehS32DgWVkoTN88Z7VAkwNqSpc/ORFT4NZYMRt/kpbvsGEq+2h+3QvhI6dOBJERrnrCdUYq+eiJsKZWA8C/SMJAembN7UaKgDoierqHQgDvw5K//D+A9hbJ8avkIS4WA2iKDNusK/mhCcJVJphznZTUgqIYN0M033aiE9JkUaxoHaN3s/TRtfQQYlkQtZmkqnk5UtfdLcdbNtnOndBOuh2k32Xdmk07/iI0TjZP49vri5jvulbiyXKBV6rvd4Euz50C9EUFT2vrffUGm9/qMj0qVVeLL49ShkDtc0eYVNSHIt68qutUlyW6dqOlPTOc7j89lqFs8nOI3lZDaLV/Ls57eLxUQpmfb+x8fmLJmkoy+ECMje4X/hr3PUGWc4cuv62q7OV++KQqlYzt4V8XyyWMRSTlfx+VTN5zOcrN4uFmmisJBNRZDBKA3s0qawXW0HCh7xKBa/9EwKEAHD33NwM00mjIyzgWrZNe0A479n5xHLd1ATPlDqKqkN++t4tx2YewubaTdM9jeCCLInJ/xA32UEpQ3Em7bblQz41Vdty8vfG/TDjWMjvZYrLsLtFpQOLCvIClkFPIlvN8Pg9afhSvCTePHW8Gw2YycY5vxGVg2/QQRdoxxfVdplG40dwdH1Khd5jo4ONvO5zx246/Srj1/4tG+4Xoetd9f12SCwwWdjOezJ3iP/t9EL6ttt39Rtu9PvP724Y8ho1OayLNu2/RNZ52p+
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get schema for a single Bohr OGC API feature collection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/collections/{collectionId}/schema"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get schema for a single Bohr OGC API feature collection
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"collectionId","in":"path","description":"A known collection ID.","required":true,"schema":{"type":"string"},"example":"my-collection"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Schema for an Bohr OGC API feature collection.","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"type":"object"}}}}},"400":{"description":"The server cannot or will not process the request due to an apparent client error. See error response for details.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}},"404":{"description":"Collection '{collectionId}' is not a supported Collection. Please refer to the documentation for a list of supported Collections.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

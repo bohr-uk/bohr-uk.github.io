@@ -1,0 +1,71 @@
+---
+id: get-item-ts-by-id
+title: "Retrieve timeseries data for a feature from the feature collection"
+description: "Retrieve timeseries data for a feature from the feature collection"
+sidebar_label: "Retrieve timeseries data for a feature from the feature collection"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1lv2zgQ/ivEvKQFdPlo19Vbjm5g7AItkhS72CIPtDSyWEukSo7seg399wUpWVZip0fQfVmsEdgMj+Ec33wz3IHBpNaCthB/3AGvhL9CO773QPGa8rEdN/ceEF8aiD/Cr8ip1mjA7qhQcxJKzlOIYYk0JyzvzMV2noIHFde8REJtnGzJS4QYElUUmHSHPBASYqg45eBBiibRorJrEMM5W0m1kexwgM2vAvBA4+daaEwhJl2jBybJseQQ74C2lb3CkBZyCY0H+IWXVWHnyq1/EASN1+sjCMtvapK1RrP5FdvkIsmZMIxyZCJFSSITqF+I9CXLlHbT3fZnKxt1H//E1/4ztCHRZm/A5xr19siCuxxZopROheSETGOGGmWCzGwNYclU5vTWaColDbIlqhJJCzQBmxMra0NsgYx/VYipq0ppwpQttk7cweEBu8KM1wVZx/1xfTubskLJpaA6xbDg5AbsRU5UxWG42WwCVaFcChNIpDDFLEy0Cd9dX4ajYBJe3tzOpi+td5/ypgco69LC9UdEwn1jkb73grFyx1Fkfx4Dwgi5LPpAMyGHcR8aDh4kShJKsmJ4VRUicSkTfjJW1u7YBrX4hAnZBNI2wUi0mrSrJyztYXMnSjRoo3Y5hDoUQq4GIoBrzS1GLPTNty/ONWanLs6ULjlBDLUu7DUai5O4Pq24XRBUnFo5LMHvQq7cRLannWeb8X3+u3X+c9qZrxqdckKfRIkPRIyj8cSPRn40uoui2P39ZYWdUuWgaH9+B0khUNKN9TicX1yOxhNnfsrpJEQGJwlLR8e1RojHUfDKg7wuReq4/fUrDwxxqg3E8O43aIZOPuDmqfkDnm665LA7Gw+mp9LDso1BvUbNEi6lIqY024iiYHZcaZWgMR3hfK7REEtrZKQYl4xXFdcoibWOYKi10gG7RWyHB46yZJsicVGYn5hlIj0V9cfpT5onQi4H/N9zf6sweFAKKUpLQjMPSv6lHx/Acn5xeTUaT6YWIKVZfs/Fg//3pN26hXJOTCVJrTWmwYMcems3HMVtejpuxxTGznbDmt2cef2mjaCciTQ+27VVtDmzkZaKUY8cZpHLElUXqYv+wgaulmnA3hfIDbIkx2TFhKsMfFBDBgooPayo/wf6+wPdPBZ846r6Go8iZK3ifWAzrconKpo1GClXXcfn+jzKIYZwPQoP20z4EDWhY+lwD5SQbMfSkkTbHtoiErtybeIw5JUIFirXQb0CW5P3XeqtjW4bwL5XPRSESvyGtiJ0bdGf/vn7ud9OueYoR56itlHY97YHlLQTHmSF2rTya8qVFn87eF2qFI8mPzxQ2aor66TA2gSJ4GWhlkIGiSrDdDRJR1Oc+m8mi4k/jXDk82gy8Rd8/Mur2SxKUx629+9/1uMgCvd32QpDaoX/xn3uIifcdVOqan27eLN4nWVp6vPJ68yfRrOZz/lo4b8ZpdPpBKPFq9ksDNK2p7PFsBt1mBMyU863HTAvVK7Zu+tLdv5+znzWPyE8sOFvkbkeBZGrlMpQyV0qd2H8KZh9kAZ91Am/UFgVXLg+yUFw1+H5I6xHjm16RIMH8ePXi2s9PIj7VwS5h1GuDFkRu92CG/ygi6ax021zbtGeCsMXhX0WZLwweKRfT3L/2db9ZARcPnfPmTUvarvD5f+aa2Ed9oPOe3HTPb9esiefkycV2TOK3A416RUcosC+w56p0fOflc9QuoNoc994eyK0zmwXz5MEKxocOyqtNgo98V+/vQPPkeFD+l05ru0GVvpJlYa83F5vv60fT27f7Vpib5p+f7v05InOvN5yq33TNP8AJie/iQ==
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieve timeseries data for a feature from the feature collection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/collections/{collectionId}/items/{itemId}/ts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve timeseries data for a feature from the feature collection
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"collectionId","in":"path","description":"A known collection ID.","required":true,"schema":{"type":"string"},"example":"my-collection"},{"name":"itemId","in":"path","description":"A feature ID which is the identifier(id) for the feature.","required":true,"schema":{"type":"string"},"example":"00000000-0000-0000-0000-000000000000"},{"name":"crs","in":"query","description":"The coordinate reference system of the response geometries. It must be a coordinate reference system supported by the collection. Default is WGS84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84).","schema":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84"]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"A single feature in the feature collection.","content":{"application/json":{"schema":{"type":"object","properties":{"type":{"type":"string","example":"TimeseriesCollection"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string","format":"url"},"rel":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"}},"title":"Link"}},"features":{"type":"array","items":{"type":"object","properties":{"type":{"type":"string","example":"TimeSeries"},"ts":{"type":"string","format":"date-time","example":"2023-01-01T00:00:00Z"},"properties":{"type":"object","example":{"clientRef":"ABC123"}},"data":{"type":"object","example":{"temperature":20.5,"humidity":65,"status":"OK"}}},"title":"Timeseries"}}},"title":"TimeseriesCollectionResponse"}}}},"400":{"description":"The server cannot or will not process the request due to an apparent client error. See error response for details.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}},"404":{"description":"The feature collection '{collectionId}', feature with id:'{itemId}' or no timeseries data could not be found. Please check it is a supported collection or feature.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
