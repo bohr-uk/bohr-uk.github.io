@@ -1,0 +1,71 @@
+---
+id: get-collection-by-id
+title: "Get a single Bohr OGC API feature collection"
+description: "Get information about an Bohr OGC API feature collection"
+sidebar_label: "Get a single Bohr OGC API feature collection"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVttu4zYQ/RViXtICWivZZC/QW9ZN3aAFNki8T4EfaGlscS2RXHJkxxAE9B/6h/2SYnSJ7FhOXPSpT7bJuZwzHM+ZEkguPUSPMDZZhjEpoz3MAkjQx05Z/g0RTJCE0gvjcsknQs5NQUJq8cWkTnydjMX13a1YoKTCoYifQ0EAxqKrnW4TiGCJ1Cf6sr1NIAArncyR0DGOErTMESLog9RGimFYSSm8xHYtVtps9E5WcfvLCAJw+KNQDhOIyBUYgI9TzCVEJdDWcgpPTuklBIC6yLkGDpcN6LkpdCLdtk68cNKTK2LmBgH4wq1xC7MqAHySuc04VOtZzTitt0Z79Jzp/fk5f7xE7JVeZvhW9ZhEbDShJg4irc1UXNcy/O45UnnIycy/Y0xcVceVJ9XgUMkh7yoAUsTwB272EA/cx87vnEvnZF0swty/VuGUyEZhuNlsRsaiXio/0khhgoswdj78OhmHF6PLcHz/8PkKgrfMb+4eJuF5eHX5/uPJxpefP3yCWVUF4Mk4ucSx+38gbqo7rWEOPAg+dX3yeid4K0nJ7G3D+dw8nfDEx851kc/RQQDN1IAIElPMM4SqOmifjkXfkfDQwLxpWPEF5ta4U4ArTejWe5b/FvwzIE78FtRpi6zDunPVw8+UXp2S+Qin1OFiqEufi1u4jNM4zIb/6Mfa5tgE2CHxh9KrthTtST/C79thx/dVAFdD426aouBZjJ7ERnqhDQlfWGscYTKC2u3q0K1PIs7KXTWozoRqosg+jujNR+IuQ+k56QKdICMoRZGYuMhRUyNgC+OEFJnyJMxiMIpvkX0YJvTbdHoncqTUJB05TDpcPTsxTZUXqBNrlCZhdLbtbr04m9xMzzrvLt/HIb3oypeiTNCJtcwKHKxlFUADqtHaWl0phQjCvoI+3C8naxq6dae/3ElRPZp8FIbSqtHcpG5UrEKzjMP1RS1yHuPCKdo+sP40LSqterfC7W6PW/U7cpO3kr7CbafkPwp0Wybcer1rmJ3m3NoyWV5Kaqe2M/cU9e8//xK/NqrqIQBm2BR0fTE65+TWeMplLXBtFl505Iny/HITKXux/i8LU8uf8IlCm0mlGWn9KGX7mI87yxETi/Z2pVkAqfHEZmU5lx6/uayq+LgpevQ4C2AtnZI8jfnFE+X5ewLRQmYeX6H10327U/0sjq5dg/i7R9X8iHX7QgQQ1K/6YterWOq6dngsW5PrOEZLO84H2xC35XPvT26mUFX/AGwptL0=
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a single Bohr OGC API feature collection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/collections/{collectionId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get information about an Bohr OGC API feature collection
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"collectionId","in":"path","description":"A known collection ID.","required":true,"schema":{"type":"string","enum":["region","boundary","infrastructure","survey"]},"example":"region"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"A single Bohr OGC API feature collection.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"crs":{"type":"array","items":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84","http://www.opengis.net/def/crs/EPSG/0/4326","http://www.opengis.net/def/crs/EPSG/0/3857"]}},"storageCrs":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84","http://www.opengis.net/def/crs/EPSG/0/4326","http://www.opengis.net/def/crs/EPSG/0/3857"]},"itemType":{"type":"string"},"extent":{"type":"object","properties":{"spatial":{"type":"object","properties":{"bbox":{"type":"array","items":{"type":"array","items":{"type":"number","format":"double"}}},"crs":{"type":"string"}},"title":"SpatialExtent"},"temporal":{"type":"object","properties":{"interval":{"type":"array","items":{"type":"array","items":{"type":"string"}}},"trs":{"type":"string"}},"title":"TemporalExtent"}},"title":"Extent"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string","format":"url"},"rel":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"}},"title":"Link"}}},"title":"CollectionResponse"}}}},"400":{"description":"The request was not supported."},"404":{"description":"Collection '{collectionId}' is not a supported Collection. Please refer to the documentation for a list of supported Collections."},"405":{"description":"The HTTP method requested is not supported. This endpoint only supports 'GET' requests."},"406":{"description":"A request header value was not supported."}}}
+>
+  
+</StatusCodes>
+
+
+      
