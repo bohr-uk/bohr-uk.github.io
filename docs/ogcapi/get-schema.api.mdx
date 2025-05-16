@@ -1,0 +1,71 @@
+---
+id: get-schema
+title: "Get schema for a single Bohr OGC API feature collection"
+description: "Get schema for a single Bohr OGC API feature collection"
+sidebar_label: "Get schema for a single Bohr OGC API feature collection"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE2P00AM/SsjXwqr2XZBC4fcyrKUigMVlFPVwzRxm6HJzOyM090oisR/4B/yS5Dz0Y9tEYhe0jZ+fvZ7tisgtQkQLeDOZhnGpK0JsJRgHXrFv6YJRLBB+hqnmCuQ4JRXORJ6hlVgVI4QQbyHTxOQoA1E4BSlICHBEHvt+B1EMBZbYx+NOADE9P0QJHh8KLTHBCLyBUoILWFUAZWOKQJ5bTYgAU2Rc8keN5xTwsoWJlG+bIjXXgXyRUyFR5AQCr/DEpa1BHxSucs4VYesl0wbnDUBAzO9vrnhx2nFbedibb1QRryzqRefJ3diPJuKNSqmOWqGO4mtITTEma5GV/w468WuvmNMIEEliWacymaeNSfdVnIaV/NHwu2l8uYpija/YAkxkNBBGEsiFM5ZT5gMxSxDFVB4XKMXZEVi4yJHQ43FTWudOGEIDdHtOdFhQsSgOva7HvSM6sApDuHn9JTihRKUyHQgYdcXs/SVvbkswcf5fCZypNQmvQ6YXFBinuog0CTOakPCmqzs3wYxmNzPBz2653t7zjfeK52iStCLncoKFI/qORuwa6fYCVJvV9tz0GaT4d/mCiS0zbXb2OwhpRDB6BATRqe2jEK/swH9rl/YwmcQQUrkQjQaKaeHK5v6YbFt1iFgXHhNZTP07Sgqp6+3WB5NpXL6E/K2dcu/xbLf+YcCfcnCdajrVqF/A3exLJo2a9uANDUbeyLPrx8/xYdWogASuLVW3N2r4Q2TOxsoV4YTdCz/L/uJffsuCJ9o5DKlDfM1mladJYujY8jlRc9uY+fKUkJqA3F8Va1UwG8+q2v+u9UwWiwl7JTXasUKLCpIdODvCURrlQU8K21/d+DFl+6YvhR/vLcXG+k9MuxJM9UQAcjGpGdHvuaT2ru7qLqQcRyjoyMwX0AerP30Tu7nUNe/AYoVN/s=
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get schema for a single Bohr OGC API feature collection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/collections/{collectionId}/schema"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get schema for a single Bohr OGC API feature collection
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"collectionId","in":"path","description":"A known collection ID.","required":true,"schema":{"type":"string","enum":["region","boundary","infrastructure","survey"]},"example":"region"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Schema for an Bohr OGC API feature collection.","content":{"*/*":{"schema":{"type":"object","additionalProperties":{"type":"object"}}}}},"400":{"description":"The schema request is not supported. Please refer to documentation for examples."},"404":{"description":"Collection '{collectionId}' is not a supported Collection. Please refer to the documentation for a list of supported Collections."},"405":{"description":"The HTTP method requested is not supported. This endpoint only supports 'GET' requests."},"406":{"description":"A request header value was not supported."}}}
+>
+  
+</StatusCodes>
+
+
+      

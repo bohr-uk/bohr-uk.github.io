@@ -1,0 +1,63 @@
+---
+id: get-all-collections
+title: "Get list of all Bohr OGC API feature collections"
+description: "Get a list of all the available Bohr OGC API feature collections"
+sidebar_label: "Get list of all Bohr OGC API feature collections"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1vGjEQ/SvWXHrZsCQhH9pbiiiNWilRQk8RB7M7sA5e27FnSRBaqf+h/7C/pPLuQhZCAql6qdoTa88b+43nYb8FEJ84iO6gq6XEmIRWDoYBJOhiK4wfQwR9JMaZFI6YHjMuJaMUGZ9xIflIIvuoU8uu+l12cX3Jxsgpt8jixooBaIOW+8FlAhFMkC6k7K4hLDqjlUMH0QKO2m3/s07jQsqdW7UggFgrQkV+AW6MFHG5cXjv/CoLcHGKGfdfNDcIEejRPcYEARjraZKoOEihpq4B49byOQQgCDO3Oz21OG6gHFmhJhDAWNuME0SQWwmFr1u+hBVBPbEtIEhuizyH4KtQ03IitvtUsOKGKs+8GlIiE4Xh4+NjSxtUE+FaCilMcBzG1oVX/W542DoOuze35x0IdsF717f9sB0enZ2123ujzzrtk73BneOj073Bx+cnZzAsT6chwN/us0je1aWN/9aW+P+evdUzR9ryCXbtP38YlSYGr10T+LS8BN/WrzOcBJe7gaORftpDmK/NqzwboW1egInORxKheHlRbbnSbiuavaoqH8DMaLsPcaEI7WwN+V7yK0J+411UBzWzJddG6Jn+3/+6NGaeX/Kb+hV/Le6agCKAzraHfpAis/iQoyP2yB1TmpjLjdGWMGlBmXayPe3zYHDNMqRUJ8slMGFicw02SIVjqBKjhSKmlZwvo4596PcGH5bZrt7vdIsfWZFMkSdo2YzLHLcyLgKoSFXmx7eTUwoRhOs2yaGdodfX3aLsYFReCS4KQ25Ea6RT28qnUAw9Ms6toPmtdzOVJrgRB1OcN0VlxBf0qlI88+NpORCe/EOOdu5Lq7MOqhr2S66xviyhxrpMqlu9ZtB+fv/BPlUmzVfnS6uObnbYavvNjXaU8fIdrHfxXrPpNPfwlhsP6sr+/QnfWp8F4ROFRnKhPOuyM4u6hXdrNmIYQKod+enFYsQdfrOyKPx0deDR3TCAGbfCE/CjIliepu952T64iGM0XiSloMpWbNhYr4CVoPq9ARTFL9Nb+D8=
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get list of all Bohr OGC API feature collections"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/collections"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of all the available Bohr OGC API feature collections
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"All Bohr OGC API feature collections.","content":{"application/json":{"schema":{"type":"object","properties":{"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string","format":"url"},"rel":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"}},"title":"Link"}},"crs":{"type":"array","items":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84","http://www.opengis.net/def/crs/EPSG/0/27700","http://www.opengis.net/def/crs/EPSG/0/7405","http://www.opengis.net/def/crs/EPSG/0/4326","http://www.opengis.net/def/crs/EPSG/0/3857"]}},"collections":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"crs":{"type":"array","items":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84","http://www.opengis.net/def/crs/EPSG/0/27700","http://www.opengis.net/def/crs/EPSG/0/7405","http://www.opengis.net/def/crs/EPSG/0/4326","http://www.opengis.net/def/crs/EPSG/0/3857"]}},"storageCrs":{"type":"string","enum":["http://www.opengis.net/def/crs/OGC/1.3/CRS84","http://www.opengis.net/def/crs/EPSG/0/27700","http://www.opengis.net/def/crs/EPSG/0/7405","http://www.opengis.net/def/crs/EPSG/0/4326","http://www.opengis.net/def/crs/EPSG/0/3857"]},"itemType":{"type":"string"},"extent":{"type":"object","properties":{"spatial":{"type":"object","properties":{"bbox":{"type":"array","items":{"type":"array","items":{"type":"number","format":"double"}}},"crs":{"type":"string"}},"title":"SpatialExtent"},"temporal":{"type":"object","properties":{"interval":{"type":"array","items":{"type":"array","items":{"type":"string"}}},"trs":{"type":"string"}},"title":"TemporalExtent"}},"title":"Extent"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string","format":"url"},"rel":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"}},"title":"Link"}}},"title":"CollectionResponse"}}},"title":"CollectionsResponse"}}}},"400":{"description":"The request was not supported."},"405":{"description":"The HTTP method requested is not supported. This endpoint only supports 'GET' requests."},"406":{"description":"A request header value was not supported."}}}
+>
+  
+</StatusCodes>
+
+
+      

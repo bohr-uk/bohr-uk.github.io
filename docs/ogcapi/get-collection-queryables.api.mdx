@@ -1,0 +1,71 @@
+---
+id: get-collection-queryables
+title: "Get a list of queryable attributes for this feature collection"
+description: "Get a list of queryable attributes for this feature collection"
+sidebar_label: "Get a list of queryable attributes for this feature collection"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVs2O20YMfpUBEWATQLG3adqDbts03Rot0E3qnhY+0BJtTVaa0XIoZw1BQN+hb9gnKagfW2vLaYqe1jsk5yM/ih+nBsFtgPge3vk8p0SsdwFWEfiSGPW/RQoxbEmO9g8V8R7XOQWIoETGgoRYL6nBYUEQQ3JwXqQQgXUQQ4mSQQQphYRtqTaI4cY8OP/ZmWOAWfw4gwiYHivLlEIsXFEEIcmoQIhrkH2pEEHYui1EQK4qtACmrd4ZwdpXLkXet8AbxiBcJVIxQQSh4h3tYdVEQE9YlLle1Uc2K4UNpXeBgiK9ub7WP6cZ5zaI8RvzOPBgUITtuhIKBl1qJCPLRvMMZuPZSGaD2RBqDqNKtczEOyEnCoNlmduk5Xz+KShWfV61X3+iRJR31g6J7TJ9cYmeJoIXNp087w6mDFbyacszJibsz5M6TRnT1Goo5ndf9Du55WI2FwvYeC5QJk0FPv1KbivZyGqd0JYYjoF69O2btiIUIZ6u9t/YyCwxcpLtp7lC7ht/Zkoym0/3rLBuIVSEr8y+wKf/4m47X0gsJ1WO/PIw6a8Oc3a4CJmxHbETgCHZ5vglweGeC8fhYz92am8ieDs1eMuMRiOn+kBBjA3GeTGhKkvPQunM3OWEQR02xEa8SX1SFeSknax2HvvJDzNosd6eYx3FzlzVYzFrrgZEPGKao/s5vGQ0kQIeVGTqliGz76ZZ+Hm5vDMFSebTgQdKJ5hYqu6QS0tvnRjv8v1gDebq9v3yaoge8L6fkruB6YwwJTY7zCsyn/EUDZrTkYBbklGhk3L5BXmECLoau/3T7hqdW5gffcL8eXfmj+PdFIh3w2KqOIcYMpEyxPM5lna29hnPqodW9gMlFVvZ/64y2ukOlvb1A41nF0v7C+kn3y+5B9oPu62FVQ77qNcdWV8X3Psqf9Zt/Ej04Aefsfnt9p25uVuYv//8y/zU0aTVaWkdz7tvZtetpPggBbZi1KP87w5Ma5zQk8zLHK1T2Jbauu/O/Wj3a5bxyVNg1KBVBJkPojF1vcZAf3DeNHrc0RnfryLYIdtWObSJqQ36O4V4g3mgs/QO2xRefuzfD6/MxSfGZDFDu5y2p/3WIQaI2n6dvGsafUUMjb6ve5ebJKFSRsFne10/uMOXfft+CU3zD+aWTyM=
+sidebar_class_name: "get api-method"
+info_path: docs/ogcapi/bohr-ogc-api-features
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a list of queryable attributes for this feature collection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/collections/{collectionId}/queryables"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of queryable attributes for this feature collection
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"collectionId","in":"path","description":"A known collection ID.","required":true,"schema":{"type":"string","enum":["region","boundary","infrastructure","survey"]},"example":"region"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"A list of queryable attributes and their types for this feature collection.","content":{"application/json":{"schema":{"type":"object","properties":{"$schema":{"type":"string"},"$id":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"properties":{"type":"object","additionalProperties":{"type":"object","properties":{"title":{"type":"string"},"type":{"type":"string"},"format":{"type":"string"},"maxLength":{"type":"integer","format":"int32"},"pattern":{"type":"string"},"description":{"type":"string"},"hierarchy":{"type":"string"},"parent":{"type":"string"},"child":{"type":"string"},"minItems":{"type":"integer","format":"int32"},"maxItems":{"type":"integer","format":"int32"},"items":"circular(Queryable)","enum":{"type":"array","items":{"type":"string"}}},"title":"Queryable"}}},"title":"QueryablesResponse"}}}},"400":{"description":"The queryable request is not supported. Please refer to documentation for examples."},"404":{"description":"Collection '{collectionId}' is not a supported Collection. Please refer to the documentation for a list of supported Collections."},"405":{"description":"The HTTP method requested is not supported. This endpoint only supports 'GET' requests."},"406":{"description":"A request header value was not supported."}}}
+>
+  
+</StatusCodes>
+
+
+      
