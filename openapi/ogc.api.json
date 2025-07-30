@@ -116,7 +116,17 @@
           "required" : true,
           "schema" : {
             "type" : "string",
-            "enum" : [ "region", "boundary", "infrastructure", "survey" ]
+            "enum" : [
+              "region",
+              "boundary",
+              "infrastructure",
+              "survey",
+              "survey_runs",
+              "survey_coverage",
+              "survey_indications",
+              "survey_indication_areas",
+              "survey_routes"
+            ]
           },
           "example" : "region"
         } ],
@@ -158,7 +168,17 @@
           "required" : true,
           "schema" : {
             "type" : "string",
-            "enum" : [ "region", "boundary", "infrastructure", "survey" ]
+            "enum" : [
+              "region",
+              "boundary",
+              "infrastructure",
+              "survey",
+              "survey_runs",
+              "survey_coverage",
+              "survey_indications",
+              "survey_indication_areas",
+              "survey_routes"
+            ]
           },
           "example" : "region"
         } ],
@@ -203,7 +223,17 @@
           "required" : true,
           "schema" : {
             "type" : "string",
-            "enum" : [ "region", "boundary", "infrastructure", "survey" ]
+            "enum" : [
+              "region",
+              "boundary",
+              "infrastructure",
+              "survey",
+              "survey_runs",
+              "survey_coverage",
+              "survey_indications",
+              "survey_indication_areas",
+              "survey_routes"
+            ]
           },
           "example" : "region"
         } ],
@@ -245,7 +275,17 @@
           "required" : true,
           "schema" : {
             "type" : "string",
-            "enum" : [ "region", "boundary", "infrastructure", "survey" ]
+            "enum" : [
+              "region",
+              "boundary",
+              "infrastructure",
+              "survey",
+              "survey_runs",
+              "survey_coverage",
+              "survey_indications",
+              "survey_indication_areas",
+              "survey_routes"
+            ]
           },
           "example" : "region"
         }, {
@@ -368,7 +408,17 @@
           "required" : true,
           "schema" : {
             "type" : "string",
-           "enum" : [ "region", "boundary", "infrastructure", "survey" ]
+           "enum" : [
+              "region",
+              "boundary",
+              "infrastructure",
+              "survey",
+              "survey_runs",
+              "survey_coverage",
+              "survey_indications",
+              "survey_indication_areas",
+              "survey_routes"
+            ]
           },
           "example" : "region"
         }, {

@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 const config: Config = {
-  title: 'Developer Portal',
+  title: 'Bohr Developer Portal',
   tagline: 'Data is our DNA',
   favicon: 'img/favicon.svg',
 
