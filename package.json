@@ -34,6 +34,18 @@
     "@types/react": "^19.0.0",
     "typescript": "~6.0.2"
   },
+  "overrides": {
+    "follow-redirects": "^1.16.0",
+    "serialize-javascript": "^7.0.5",
+    "yaml": "^2.8.3",
+    "openapi-to-postmanv2": {
+      "js-yaml": "^4.1.1",
+      "lodash": "^4.17.21"
+    },
+    "postman-collection": {
+      "lodash": "^4.17.21"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.5%",
@@ -47,6 +59,6 @@
     ]
   },
   "engines": {
-    "node": ">=20.0"
+    "node": ">=24.0"
   }
 }
