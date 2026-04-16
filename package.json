@@ -15,22 +15,36 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.8.1",
-    "@docusaurus/preset-classic": "^3.8.1",
+    "@docusaurus/core": "3.10.0",
+    "@docusaurus/faster": "3.10.0",
+    "@docusaurus/preset-classic": "3.10.0",
     "@mdx-js/react": "^3.0.0",
     "bohr-uk": "file:",
     "clsx": "^2.0.0",
-    "docusaurus-plugin-openapi-docs": "^4.4.0",
-    "docusaurus-theme-openapi-docs": "^4.4.0",
+    "docusaurus-plugin-openapi-docs": "^5.0.0",
+    "docusaurus-theme-openapi-docs": "^5.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.8.1",
-    "@docusaurus/tsconfig": "^3.8.1",
-    "@docusaurus/types": "^3.8.1",
-    "typescript": "~5.6.2"
+    "@docusaurus/module-type-aliases": "3.10.0",
+    "@docusaurus/tsconfig": "3.10.0",
+    "@docusaurus/types": "3.10.0",
+    "@types/react": "^19.0.0",
+    "typescript": "~6.0.2"
+  },
+  "overrides": {
+    "follow-redirects": "^1.16.0",
+    "serialize-javascript": "^7.0.5",
+    "yaml": "^2.8.3",
+    "openapi-to-postmanv2": {
+      "js-yaml": "^4.1.1",
+      "lodash": "^4.17.21"
+    },
+    "postman-collection": {
+      "lodash": "^4.17.21"
+    }
   },
   "browserslist": {
     "production": [
@@ -45,6 +59,6 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=24.0"
   }
 }

@@ -8,6 +8,11 @@ const config: Config = {
   tagline: 'Data is our DNA',
   favicon: 'img/favicon.svg',
 
+  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  future: {
+    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
+
   url: 'https://bohr-uk.github.io/',
   baseUrl: '/',
 
@@ -15,7 +20,12 @@ const config: Config = {
   projectName: 'bohr-uk.github.io',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    }
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -74,6 +84,9 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'Developer Portal',
       logo: {
