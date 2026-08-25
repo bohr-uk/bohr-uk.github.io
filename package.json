@@ -36,6 +36,7 @@
   },
   "overrides": {
     "follow-redirects": "^1.16.0",
+    "image-size": "npm:image-size-next@2.1.1",
     "serialize-javascript": "^7.0.5",
     "yaml": "^2.8.3",
     "openapi-to-postmanv2": {
