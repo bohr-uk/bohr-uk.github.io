@@ -29,3 +29,7 @@
 html[data-theme="dark"] .navbar .navbar__logo {
     content: url(/img/logo_dark.svg);
 }
+
+.openapi-tabs__schema-label {
+    font-size: medium;
+}

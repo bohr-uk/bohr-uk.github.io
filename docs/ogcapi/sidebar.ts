@@ -5,6 +5,17 @@ const sidebar: SidebarsConfig = {
         {
             type: "doc",
             id: "ogcapi/bohr-ogc-api-features",
+            label: "Introduction",
+        },
+        {
+            type: "doc",
+            id: "ogcapi/bohr-ogc-api-shared-responsibility",
+            label: "Shared Responsibility Model",
+        },
+        {
+            type: "doc",
+            id: "ogcapi/bohr-ogc-api-auth",
+            label: "Authentication",
         },
         {
             type: "category",
@@ -43,13 +54,13 @@ const sidebar: SidebarsConfig = {
                 {
                     type: "doc",
                     id: "ogcapi/get-landing-page-response",
-                    label: "Bohr OGC API – Features landing page",
+                    label: "Bohr OGC API - Features landing page",
                     className: "api-method get",
                 },
                 {
                     type: "doc",
                     id: "ogcapi/get-conformance-response",
-                    label: "Bohr OGC API – Features conformance page",
+                    label: "Bohr OGC API - Features conformance page",
                     className: "api-method get",
                 },
             ],
