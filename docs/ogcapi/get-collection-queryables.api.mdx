@@ -20,52 +20,135 @@ import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
 
 <Heading
-  as={"h1"}
-  className={"openapi__heading"}
-  children={"Get a list of queryable attributes for this feature collection"}
->
-</Heading>
+    as={"h1"}
+    className={"openapi__heading"}
+    children={"Get a list of queryable attributes for this feature collection"}
+></Heading>
 
 <MethodEndpoint
-  method={"get"}
-  path={"/v1/collections/{collectionId}/queryables"}
-  context={"endpoint"}
->
-  
-</MethodEndpoint>
-
-
+    method={"get"}
+    path={"/v1/collections/{collectionId}/queryables"}
+    context={"endpoint"}
+></MethodEndpoint>
 
 Get a list of queryable attributes for this feature collection
 
 <Heading
-  id={"request"}
-  as={"h2"}
-  className={"openapi-tabs__heading"}
-  children={"Request"}
->
-</Heading>
+    id={"request"}
+    as={"h2"}
+    className={"openapi-tabs__heading"}
+    children={"Request"}
+></Heading>
 
 <ParamsDetails
-  parameters={[{"name":"collectionId","in":"path","description":"A known collection ID.","required":true,"schema":{"type":"string"},"example":"my-collection"}]}
->
-  
-</ParamsDetails>
+    parameters={[
+        {
+            name: "collectionId",
+            in: "path",
+            description: "A known collection ID.",
+            required: true,
+            schema: { type: "string" },
+            example: "my-collection",
+        },
+    ]}
+></ParamsDetails>
 
-<RequestSchema
-  title={"Body"}
-  body={undefined}
->
-  
-</RequestSchema>
+<RequestSchema title={"Body"} body={undefined}></RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"description":"A list of queryable attributes and their types for this feature collection.","content":{"application/json":{"schema":{"type":"object","properties":{"$schema":{"type":"string"},"$id":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"properties":{"type":"object","additionalProperties":{"type":"object","properties":{"title":{"type":"string"},"type":{"type":"string"},"format":{"type":"string"},"maxLength":{"type":"integer","format":"int32"},"pattern":{"type":"string"},"description":{"type":"string"},"hierarchy":{"type":"string"},"parent":{"type":"string"},"child":{"type":"string"},"minItems":{"type":"integer","format":"int32"},"maxItems":{"type":"integer","format":"int32"},"items":"circular(Queryable)","enum":{"type":"array","items":{"type":"string"}}},"title":"Queryable"}}},"title":"QueryablesResponse"}}}},"400":{"description":"The server cannot or will not process the request due to an apparent client error. See error response for details.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}},"404":{"description":"Collection '{collectionId}' is not a supported Collection. Please refer to the documentation for a list of supported Collections.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}}}}
->
-  
-</StatusCodes>
-
-
-      
+    id={undefined}
+    label={undefined}
+    responses={{
+        "200": {
+            description:
+                "A list of queryable attributes and their types for this feature collection.",
+            content: {
+                "application/json": {
+                    schema: {
+                        type: "object",
+                        properties: {
+                            $schema: { type: "string" },
+                            $id: { type: "string" },
+                            type: { type: "string" },
+                            title: { type: "string" },
+                            description: { type: "string" },
+                            properties: {
+                                type: "object",
+                                additionalProperties: {
+                                    type: "object",
+                                    properties: {
+                                        title: { type: "string" },
+                                        type: { type: "string" },
+                                        format: { type: "string" },
+                                        maxLength: { type: "integer", format: "int32" },
+                                        pattern: { type: "string" },
+                                        description: { type: "string" },
+                                        hierarchy: { type: "string" },
+                                        parent: { type: "string" },
+                                        child: { type: "string" },
+                                        minItems: { type: "integer", format: "int32" },
+                                        maxItems: { type: "integer", format: "int32" },
+                                        items: "circular(Queryable)",
+                                        enum: { type: "array", items: { type: "string" } },
+                                    },
+                                    title: "Queryable",
+                                },
+                            },
+                        },
+                        title: "QueryablesResponse",
+                    },
+                },
+            },
+        },
+        "400": {
+            description:
+                "The server cannot or will not process the request due to an apparent client error. See error response for details.",
+            content: {
+                "application/json": {
+                    schema: {
+                        type: "object",
+                        properties: {
+                            id: {
+                                type: "string",
+                                description: "A tracing identifier for the error.",
+                                minimum: 8,
+                                maximum: 8,
+                                example: "ABCD1234",
+                            },
+                            msg: {
+                                type: "string",
+                                description: "A description of the error that occurred.",
+                            },
+                        },
+                        title: "ErrorResponse",
+                    },
+                },
+            },
+        },
+        "404": {
+            description:
+                "Collection '{collectionId}' is not a supported Collection. Please refer to the documentation for a list of supported Collections.",
+            content: {
+                "application/json": {
+                    schema: {
+                        type: "object",
+                        properties: {
+                            id: {
+                                type: "string",
+                                description: "A tracing identifier for the error.",
+                                minimum: 8,
+                                maximum: 8,
+                                example: "ABCD1234",
+                            },
+                            msg: {
+                                type: "string",
+                                description: "A description of the error that occurred.",
+                            },
+                        },
+                        title: "ErrorResponse",
+                    },
+                },
+            },
+        },
+    }}
+></StatusCodes>
