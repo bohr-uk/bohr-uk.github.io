@@ -39,7 +39,7 @@ import TabItem from "@theme/TabItem";
                         curl -X GET \
                             -H "Content-Type: application/json" \
                             -H "X-API-Key: <api-key>" \
-                            "https://api.bohr.uk/v1/roles"
+                            "https://api.bohr.uk/v1/"
                     ```
                 </div>
             </div>
@@ -58,7 +58,7 @@ import TabItem from "@theme/TabItem";
                         <tr>
                             <th>Authorization URL</th>
                             <td>
-                                https://bohrnucleus.ciamlogin.com/d13d14e4-93b3-40e1-a033-ba275880dda/oauth2/oauth2/v2.0/authorize
+                                https://bohrnucleus.ciamlogin.com/d13d14e4-93b3-40e1-a033-ba275880dda/oauth2/v2.0/authorize
                             </td>
                         </tr>
                         <tr>
@@ -82,7 +82,7 @@ import TabItem from "@theme/TabItem";
                     ```bash
                         curl -X GET \
                             -H "Content-Type: application/json" \
-                            -H "Bearer: <access token>" \
+                            -H "Authorization: Bearer <access token>" \
                             "https://api.bohr.uk/v1/roles"
                     ```
                 </div>
