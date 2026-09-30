@@ -20,44 +20,59 @@ import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
 
 <Heading
-  as={"h1"}
-  className={"openapi__heading"}
-  children={"Bohr OGC API - Features conformance page"}
->
-</Heading>
+    as={"h1"}
+    className={"openapi__heading"}
+    children={"Bohr OGC API - Features conformance page"}
+></Heading>
 
-<MethodEndpoint
-  method={"get"}
-  path={"/v1/conformance"}
-  context={"endpoint"}
->
-  
-</MethodEndpoint>
-
-
+<MethodEndpoint method={"get"} path={"/v1/conformance"} context={"endpoint"}></MethodEndpoint>
 
 Bohr OGC API - Features conformance page
 
-<ParamsDetails
-  parameters={undefined}
->
-  
-</ParamsDetails>
+<ParamsDetails parameters={undefined}></ParamsDetails>
 
-<RequestSchema
-  title={"Body"}
-  body={undefined}
->
-  
-</RequestSchema>
+<RequestSchema title={"Body"} body={undefined}></RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"description":"Bohr OGC API API - Features conformance page.","content":{"application/json":{"schema":{"type":"object","properties":{"conformsTo":{"type":"array","items":{"type":"string"}}},"title":"ConformanceResponse"}}}},"400":{"description":"The server cannot or will not process the request due to an apparent client error. See error response for details.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}}}}
->
-  
-</StatusCodes>
-
-
-      
+    id={undefined}
+    label={undefined}
+    responses={{
+        "200": {
+            description: "Bohr OGC API API - Features conformance page.",
+            content: {
+                "application/json": {
+                    schema: {
+                        type: "object",
+                        properties: { conformsTo: { type: "array", items: { type: "string" } } },
+                        title: "ConformanceResponse",
+                    },
+                },
+            },
+        },
+        "400": {
+            description:
+                "The server cannot or will not process the request due to an apparent client error. See error response for details.",
+            content: {
+                "application/json": {
+                    schema: {
+                        type: "object",
+                        properties: {
+                            id: {
+                                type: "string",
+                                description: "A tracing identifier for the error.",
+                                minimum: 8,
+                                maximum: 8,
+                                example: "ABCD1234",
+                            },
+                            msg: {
+                                type: "string",
+                                description: "A description of the error that occurred.",
+                            },
+                        },
+                        title: "ErrorResponse",
+                    },
+                },
+            },
+        },
+    }}
+></StatusCodes>

@@ -1,0 +1,92 @@
+---
+id: bohr-ogc-api-auth
+title: "Bohr OGC API - Features"
+description: ""
+sidebar_label: Authentication
+sidebar_position: 3
+hide_title: true
+custom_edit_url: null
+---
+
+import Heading from "@theme/Heading";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+
+<span className={"theme-doc-version-badge badge badge--secondary"} children={"Version: v1.0"} />
+
+<Heading as={"h1"} className={"openapi__heading"} children={"Authentication"} />
+
+<div style={{ marginBottom: "2rem" }}>
+    Secure access to our APIs using either API keys or OAuth 2.0. This section explains the
+    available authentication methods, how to obtain credentials, and how to authorise requests to
+    securely access protected resources.
+    <SchemaTabs className={"openapi-tabs__security-schemes"}>
+        <TabItem label={"API Key"} value={"api-key"}>
+            <div>
+                API keys can be generated on the [user settings](https://nucleus.bohr.uk/settings)
+                page in Nucleus and supplied with requests to authorise against our API.
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Header parameter</th>
+                            <td>X-API-Key</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <Heading as={"h2"} children={"Example Request"} />
+                    ```bash
+                        curl -X GET \
+                            -H "Content-Type: application/json" \
+                            -H "X-API-Key: <api-key>" \
+                            "https://api.bohr.uk/v1/"
+                    ```
+                </div>
+            </div>
+        </TabItem>
+        <TabItem label={"OAuth 2.0"} value={"oauth2"}>
+            <div>
+                OAuth 2.0 authorization code flow.
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Token URL</th>
+                            <td>
+                                https://bohrnucleus.ciamlogin.com/d13d14e4-93b3-40e1-a033-ba275880dda/oauth2/v2.0/token
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Authorization URL</th>
+                            <td>
+                                https://bohrnucleus.ciamlogin.com/d13d14e4-93b3-40e1-a033-ba275880dda/oauth2/v2.0/authorize
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Scopes</th>
+                            <td>b9b6ffdd-a36f-4088-aa1b-91d443e0b588/.default</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <Heading as={"h2"} children={"Obtain Access Token"} />
+                    ```bash
+                    curl --request GET \
+                        -H "Content-Type: application/x-www-form-urlencoded" \
+                        -d grant_type=client_credentials \
+                        -d client_id=<client id> \
+                        -d client_secret=<client secret> \
+                        -d scope=b9b6ffdd-a36f-4088-aa1b-91d443e0b588/.default \
+                        "https://bohrnucleussandbox.ciamlogin.com/d13d14e4-93b3-40e1-a033-ba275880dda/oauth2/v2.0/token"
+                    ```
+                    <Heading as={"h2"} children={"Example Request"} />
+                    ```bash
+                        curl -X GET \
+                            -H "Content-Type: application/json" \
+                            -H "Authorization: Bearer <access token>" \
+                            "https://api.bohr.uk/v1/roles"
+                    ```
+                </div>
+            </div>
+        </TabItem>
+    </SchemaTabs>
+</div>

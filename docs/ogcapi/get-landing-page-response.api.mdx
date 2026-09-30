@@ -20,44 +20,75 @@ import TabItem from "@theme/TabItem";
 import Heading from "@theme/Heading";
 
 <Heading
-  as={"h1"}
-  className={"openapi__heading"}
-  children={"Bohr OGC API - Features landing page"}
->
-</Heading>
+    as={"h1"}
+    className={"openapi__heading"}
+    children={"Bohr OGC API - Features landing page"}
+></Heading>
 
-<MethodEndpoint
-  method={"get"}
-  path={"/v1"}
-  context={"endpoint"}
->
-  
-</MethodEndpoint>
-
-
+<MethodEndpoint method={"get"} path={"/v1"} context={"endpoint"}></MethodEndpoint>
 
 Bohr OGC API - Features landing page
 
-<ParamsDetails
-  parameters={undefined}
->
-  
-</ParamsDetails>
+<ParamsDetails parameters={undefined}></ParamsDetails>
 
-<RequestSchema
-  title={"Body"}
-  body={undefined}
->
-  
-</RequestSchema>
+<RequestSchema title={"Body"} body={undefined}></RequestSchema>
 
 <StatusCodes
-  id={undefined}
-  label={undefined}
-  responses={{"200":{"description":"Bohr OGC API - Features landing page.","content":{"application/json":{"schema":{"type":"object","properties":{"title":{"type":"string"},"description":{"type":"string"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string","format":"url"},"rel":{"type":"string"},"type":{"type":"string"},"title":{"type":"string"}},"title":"Link"}}},"title":"LandingPageResponse"}}}},"400":{"description":"The server cannot or will not process the request due to an apparent client error. See error response for details.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"A tracing identifier for the error.","minimum":8,"maximum":8,"example":"ABCD1234"},"msg":{"type":"string","description":"A description of the error that occurred."}},"title":"ErrorResponse"}}}}}}
->
-  
-</StatusCodes>
-
-
-      
+    id={undefined}
+    label={undefined}
+    responses={{
+        "200": {
+            description: "Bohr OGC API - Features landing page.",
+            content: {
+                "application/json": {
+                    schema: {
+                        type: "object",
+                        properties: {
+                            title: { type: "string" },
+                            description: { type: "string" },
+                            links: {
+                                type: "array",
+                                items: {
+                                    type: "object",
+                                    properties: {
+                                        href: { type: "string", format: "url" },
+                                        rel: { type: "string" },
+                                        type: { type: "string" },
+                                        title: { type: "string" },
+                                    },
+                                    title: "Link",
+                                },
+                            },
+                        },
+                        title: "LandingPageResponse",
+                    },
+                },
+            },
+        },
+        "400": {
+            description:
+                "The server cannot or will not process the request due to an apparent client error. See error response for details.",
+            content: {
+                "application/json": {
+                    schema: {
+                        type: "object",
+                        properties: {
+                            id: {
+                                type: "string",
+                                description: "A tracing identifier for the error.",
+                                minimum: 8,
+                                maximum: 8,
+                                example: "ABCD1234",
+                            },
+                            msg: {
+                                type: "string",
+                                description: "A description of the error that occurred.",
+                            },
+                        },
+                        title: "ErrorResponse",
+                    },
+                },
+            },
+        },
+    }}
+></StatusCodes>

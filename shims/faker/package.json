@@ -1,0 +1,10 @@
+{
+    "name": "@faker-js/faker",
+    "version": "10.6.0",
+    "description": "Compatibility shim for @faker-js/faker v10 satisfying legacy property accessors",
+    "main": "index.js",
+    "exports": {
+        ".": "./index.js",
+        "./locale/*": "./locale/*.js"
+    }
+}

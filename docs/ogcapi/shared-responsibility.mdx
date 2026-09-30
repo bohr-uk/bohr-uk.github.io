@@ -1,0 +1,123 @@
+---
+id: bohr-ogc-api-shared-responsibility
+title: "Bohr OGC API - Features"
+description: ""
+sidebar_label: Shared Responsibility
+sidebar_position: 2
+hide_title: true
+custom_edit_url: null
+---
+
+import Heading from "@theme/Heading";
+
+<span
+    className={"theme-doc-version-badge badge badge--secondary"}
+    children={"Version: v1.0"}
+></span>
+
+<Heading
+    as={"h1"}
+    className={"openapi__heading"}
+    children={"Shared Responsibility"}
+></Heading>
+
+<div style={{ marginBottom: "2rem" }}>
+    <div>
+        We operate a shared responsibility model with our customers. Broadly this means that the
+        security and integrity of the Nucleus platform itself is our responsibility, and the accuracy
+        and consistency of data held within it are the responsibility of the customer. The table below
+        details how this breaks down for different areas of concern.
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Domain</th>
+                    <th>Nucleus (Platform) Owns</th>
+                    <th>Customer Owns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Platform</strong>
+                    </td>
+                    <td>Securing the infrastructure, enforcing RBAC</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Data validation</strong>
+                    </td>
+                    <td>
+                        Validating submitted data against schema (type, format, required fields)
+                    </td>
+                    <td>
+                        Ensuring the accuracy and correctness of the values submitted — schema-valid
+                        data can still be operationally wrong
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Credential security</strong>
+                    </td>
+                    <td>Providing key generation, rotation, and revocation tooling</td>
+                    <td>
+                        Keeping credentials confidential, restricting use to authorised
+                        personnel/systems, rotating and revoking promptly on staff changes
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Rate limiting &amp; abuse prevention</strong>
+                    </td>
+                    <td>Enforcing documented rate limits</td>
+                    <td>
+                        Designing integrations that respect published limits and handle throttling
+                        gracefully
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Audit &amp; logging</strong>
+                    </td>
+                    <td>Maintaining a full audit trail of all writes</td>
+                    <td>Reviewing logs relevant to their own integration</td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Incident notification</strong>
+                    </td>
+                    <td>
+                        Notifying customer promptly of any platform-side incident affecting their
+                        data
+                    </td>
+                    <td>
+                        Notifying Bohr Team promptly of any suspected credential compromise or
+                        erroneous data pushed via their integration
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Environment &amp; testing</strong>
+                    </td>
+                    <td>Providing a sandbox environment that mirrors production write behaviour</td>
+                    <td>Validating integrations in sandbox before promoting to production</td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Versioning &amp; change management</strong>
+                    </td>
+                    <td>
+                        Following semantic versioning, giving deprecation notice ahead of breaking
+                        changes
+                    </td>
+                    <td>
+                        Testing against new versions and migrating before deprecated versions are
+                        retired
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

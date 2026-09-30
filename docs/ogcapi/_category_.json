@@ -1,8 +1,8 @@
 {
-  "label": "OGC API - Features",
-  "position": 1,
-  "link": {
-    "type": "generated-index",
-    "description": "Open Geospatial Consortium API - Features"
-  }
+    "label": "OGC API - Features",
+    "position": 1,
+    "link": {
+        "type": "generated-index",
+        "description": "Open Geospatial Consortium API - Features"
+    }
 }

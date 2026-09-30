@@ -1,0 +1,19 @@
+{
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "endOfLine": "auto",
+    "semi": true,
+    "tabWidth": 4,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "printWidth": 100,
+    "overrides": [
+        {
+            "files": "*.yml",
+            "options": {
+                "useTabs": true,
+                "tabWidth": 2
+            }
+        }
+    ]
+}

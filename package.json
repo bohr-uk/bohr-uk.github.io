@@ -1,66 +1,77 @@
 {
-  "name": "bohr-uk",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
-  },
-  "dependencies": {
-    "@docusaurus/core": "3.10.2",
-    "@docusaurus/faster": "3.10.2",
-    "@docusaurus/preset-classic": "3.10.2",
-    "@mdx-js/react": "^3.0.0",
-    "bohr-uk": "file:",
-    "clsx": "^2.0.0",
-    "docusaurus-plugin-openapi-docs": "^5.0.0",
-    "docusaurus-theme-openapi-docs": "^5.0.0",
-    "prism-react-renderer": "^2.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.10.2",
-    "@docusaurus/tsconfig": "3.10.2",
-    "@docusaurus/types": "3.10.2",
-    "@types/react": "^19.0.0",
-    "typescript": "~6.0.2"
-  },
-  "overrides": {
-    "follow-redirects": "^1.16.0",
-    "image-size": "npm:image-size-next@2.1.1",
-    "serialize-javascript": "^7.0.5",
-    "yaml": "^2.8.3",
-    "openapi-to-postmanv2": {
-      "js-yaml": "^4.1.1",
-      "lodash": "^4.17.21"
+    "name": "bohr-uk",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "docusaurus": "docusaurus",
+        "start": "docusaurus start",
+        "build": "docusaurus build",
+        "swizzle": "docusaurus swizzle",
+        "deploy": "docusaurus deploy",
+        "clear": "docusaurus clear",
+        "serve": "docusaurus serve",
+        "write-translations": "docusaurus write-translations",
+        "write-heading-ids": "docusaurus write-heading-ids",
+        "typecheck": "tsc",
+        "lint": "eslint .",
+        "format": "prettier --write . --ignore-path .gitignore"
     },
-    "postman-collection": {
-      "lodash": "^4.17.21"
+    "dependencies": {
+        "@docusaurus/core": "3.10.2",
+        "@docusaurus/faster": "3.10.2",
+        "@docusaurus/preset-classic": "3.10.2",
+        "@mdx-js/react": "^3.0.0",
+        "bohr-uk": "file:",
+        "clsx": "^2.0.0",
+        "docusaurus-plugin-openapi-docs": "^5.0.0",
+        "docusaurus-theme-openapi-docs": "^5.0.0",
+        "prism-react-renderer": "^2.3.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
     },
-    "uuid": "^11.1.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 3 chrome version",
-      "last 3 firefox version",
-      "last 5 safari version"
-    ]
-  },
-  "engines": {
-    "node": ">=24.0"
-  }
+    "devDependencies": {
+        "@docusaurus/module-type-aliases": "3.10.2",
+        "@docusaurus/tsconfig": "3.10.2",
+        "@docusaurus/types": "3.10.2",
+        "@eslint/js": "^10.0.1",
+        "@faker-js/faker": "file:./shims/faker",
+        "@types/react": "^19.0.0",
+        "eslint": "^10.11.0",
+        "prettier": "^3.9.9",
+        "typescript": "~6.0.2",
+        "typescript-eslint": "^8.71.0"
+    },
+    "overrides": {
+        "@faker-js/faker": "$@faker-js/faker",
+        "fast-uri": ">=3.1.7",
+        "follow-redirects": "^1.16.0",
+        "image-size": "npm:image-size-next@2.1.1",
+        "js-yaml": ">=4.3.2",
+        "serialize-javascript": "^7.0.5",
+        "svgo": ">=3.3.5",
+        "yaml": "^2.8.3",
+        "openapi-to-postmanv2": {
+            "lodash": "^4.17.21"
+        },
+        "postman-collection": {
+            "@faker-js/faker": "$@faker-js/faker",
+            "lodash": "^4.17.21"
+        },
+        "uuid": "^11.1.1"
+    },
+    "browserslist": {
+        "production": [
+            ">0.5%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 3 chrome version",
+            "last 3 firefox version",
+            "last 5 safari version"
+        ]
+    },
+    "engines": {
+        "node": ">=24.0"
+    }
 }
