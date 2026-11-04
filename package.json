@@ -52,7 +52,6 @@
         "joi": "17.13.9",
         "js-yaml": ">=4.3.2",
         "launch-editor": "2.14.2",
-        "minimatch": "11.0.4",
         "qs": "6.16.2",
         "shelljs": "0.10.0",
         "serialize-javascript": "7.1.4",
@@ -61,6 +60,15 @@
         "tinypool": "2.2.0",
         "undici": "6.29.1",
         "yaml": "^2.8.3",
+        "@eslint/config-array": {
+            "minimatch": "11.0.4"
+        },
+        "@typescript-eslint/typescript-estree": {
+            "minimatch": "11.0.4"
+        },
+        "eslint": {
+            "minimatch": "11.0.4"
+        },
         "openapi-to-postmanv2": {
             "lodash": "^4.17.21"
         },
